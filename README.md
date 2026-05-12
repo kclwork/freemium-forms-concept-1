@@ -46,13 +46,17 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
+## Live URL
+
+**https://freemium-forms-concept-1.vercel.app**
+
 ## How to Deploy
 
 ```bash
 npx vercel --prod
 ```
 
-Run from the project root. Vercel auto-detects the Vite build. The `vercel.json` catch-all rewrite handles client-side routing so all routes load correctly on hard refresh. Expected URL format: `https://freemium-forms-concept-1.vercel.app`
+Run from the project root. Vercel auto-detects the Vite build. The `vercel.json` catch-all rewrite handles client-side routing so all routes load correctly on hard refresh. Pushing to `main` on GitHub triggers an automatic Vercel redeploy.
 
 ## Phase Log
 
@@ -67,6 +71,9 @@ Run from the project root. Vercel auto-detects the Vite build. The `vercel.json`
 - **Wireframe prototype only.** Desktop only. No responsive or mobile styling. Do not attempt to adapt for mobile.
 - **Homepage is copied.** The homepage component is copied exactly from the document review prototype (`elle-summary-variant-1-v2`). The only change is the secondary CTA text ("Get a free legal form") and its link (`/forms`). Do not modify anything else on the homepage.
 - **Email capture is not connected to a real backend.** The email submission on the review step simulates success for any valid email format. No data is sent anywhere.
-- **PDF download is a static placeholder.** The download triggered after email submission serves a placeholder file. There is no real document generation.
-- **Live document preview is simulated.** The right-column document preview on the form builder updates in response to form state changes using React state. It is not powered by a real document engine.
+- **PDF download is a blob placeholder.** The download triggered after email submission is a `Blob` generated in the browser. There is no real document generation.
+- **Live document preview is a realistic NDA text simulation.** The right-column document preview renders actual NDA legal language in Georgia serif. Party names, date, duration, and governing state update in real time as the user types. It is not powered by a real document engine.
+- **Confirmation document preview shows the completed document.** On the confirmation screen the full form state is passed via React Router `location.state`. All filled values render in the document. The PREVIEW watermark is absent — its removal signals the document is complete and unlocked.
 - **Form values are held in React state only.** No data is persisted to a database, localStorage, or any external service. Refreshing the page resets all form progress.
+- **Page title:** "LegalShield — Free Legal Forms" (set in `index.html`).
+- **Primary button color:** `#692BEE` throughout.
