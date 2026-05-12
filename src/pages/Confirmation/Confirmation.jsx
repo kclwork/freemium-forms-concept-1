@@ -73,6 +73,14 @@ function DocDownloadIcon() {
   )
 }
 
+// ── Filled value helper ───────────────────────────────────────────────────────
+
+function Val({ value, placeholder }) {
+  return value
+    ? <span className={styles.docFilled}>{value}</span>
+    : <span className={styles.docPlaceholder}>{placeholder}</span>
+}
+
 // ── Stepper (all steps complete) ──────────────────────────────────────────────
 
 const STEP_LABELS = ['Parties', 'Confidential info', 'Obligations', 'Review']
@@ -95,9 +103,18 @@ function Stepper() {
   )
 }
 
-// ── Right-column document preview (all lines filled, no watermark) ────────────
+// ── Right-column document preview (completed text, no watermark) ─────────────
 
-function DocPreview({ disc, recv, onDownload }) {
+function DocPreview({ form, onDownload }) {
+  const disc = form.disclosingParty
+  const recv = form.receivingParty
+
+  const dateDisplay = (() => {
+    if (!form.startDate) return null
+    const [y, m, d] = form.startDate.split('-').map(Number)
+    return new Date(y, m - 1, d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+  })()
+
   const title = (disc || recv)
     ? `Non-disclosure agreement — ${disc || '[Party 1]'} & ${recv || '[Party 2]'}.pdf`
     : 'Non-disclosure agreement.pdf'
@@ -111,47 +128,85 @@ function DocPreview({ disc, recv, onDownload }) {
             Download <DocDownloadIcon />
           </button>
         </div>
-        <div className={styles.docBody}>
-          <div className={`${styles.docLine} ${styles.dlTitle}`} />
-          <div className={`${styles.docLine} ${styles.dlSubtitle}`} />
-          <div className={styles.docDivider} />
+        <div className={styles.docText}>
+          <p className={styles.docTextTitle}>Non-Disclosure Agreement</p>
+          <hr className={styles.docTextDivider} />
 
-          <div className={`${styles.docLine} ${styles.dlSectionHead}`} />
-          <div className={`${styles.docLine} ${styles.dlW95}`} />
-          <div className={`${styles.docLine} ${styles.dlW90}`} />
-          <div className={`${styles.docLine} ${styles.dlW82}`} />
-          <div className={`${styles.docLine} ${styles.dlW68}`} />
-          <div className={styles.docSpacer} />
+          <p className={styles.docTextParagraph}>
+            This Non-Disclosure Agreement (the &ldquo;Agreement&rdquo;) is entered into as of{' '}
+            {dateDisplay
+              ? <span className={styles.docFilled}>{dateDisplay}</span>
+              : <span className={styles.docPlaceholder}>[Date]</span>
+            }, by and between:
+          </p>
 
-          <div className={`${styles.docLine} ${styles.dlSectionHead}`} />
-          <div className={`${styles.docLine} ${styles.dlW95}`} />
-          <div className={`${styles.docLine} ${styles.dlW88}`} />
-          <div className={`${styles.docLine} ${styles.dlW93}`} />
-          <div className={`${styles.docLine} ${styles.dlW70}`} />
-          <div className={styles.docSpacer} />
+          <p className={styles.docTextParagraph}>
+            <Val value={disc} placeholder="[Disclosing Party Name]" />{' '}
+            (the &ldquo;Disclosing Party&rdquo;), and{' '}
+            <Val value={recv} placeholder="[Receiving Party Name]" />{' '}
+            (the &ldquo;Receiving Party&rdquo;). Each party is sometimes referred to herein individually as a &ldquo;Party&rdquo; and collectively as the &ldquo;Parties.&rdquo;
+          </p>
 
-          <div className={`${styles.docLine} ${styles.dlSectionHead}`} />
-          <div className={`${styles.docLine} ${styles.dlW90}`} />
-          <div className={`${styles.docLine} ${styles.dlW85}`} />
-          <div className={`${styles.docLine} ${styles.dlW78}`} />
-          <div className={`${styles.docLine} ${styles.dlW60}`} />
-          <div className={styles.docSpacer} />
+          <p className={styles.docTextSectionHead}>Recitals</p>
+          <p className={styles.docTextParagraph}>
+            WHEREAS, the Disclosing Party possesses certain confidential and proprietary information relating to its business operations, products, services, customers, and strategies; and
+          </p>
+          <p className={styles.docTextParagraph}>
+            WHEREAS, the Receiving Party desires to receive certain of said confidential information for the purpose of evaluating a potential business relationship between the Parties;
+          </p>
+          <p className={styles.docTextParagraph}>
+            NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the Parties agree as follows:
+          </p>
 
-          <div className={`${styles.docLine} ${styles.dlSectionHead}`} />
-          <div className={`${styles.docLine} ${styles.dlW88}`} />
-          <div className={`${styles.docLine} ${styles.dlW95}`} />
-          <div className={`${styles.docLine} ${styles.dlW72}`} />
-          <div className={styles.docSpacer} />
+          <p className={styles.docTextSectionHead}>1. Confidential Information</p>
+          <p className={styles.docTextParagraph}>
+            &ldquo;Confidential Information&rdquo; means any and all non-public information disclosed by the Disclosing Party to the Receiving Party, whether disclosed orally, in writing, or by any other means, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure.
+          </p>
 
-          <div className={`${styles.docLine} ${styles.dlSectionHead}`} />
-          <div className={`${styles.docLine} ${styles.dlW82}`} />
-          <div className={`${styles.docLine} ${styles.dlW90}`} />
-          <div className={`${styles.docLine} ${styles.dlW55}`} />
-          <div className={styles.docSpacer} />
+          <p className={styles.docTextSectionHead}>2. Obligations of Receiving Party</p>
+          <p className={styles.docTextParagraph}>
+            The Receiving Party agrees to: (a) hold the Confidential Information in strict confidence; (b) not disclose the Confidential Information to any third party without the prior written consent of the Disclosing Party; (c) use the Confidential Information solely for the purposes described in this Agreement; and (d) protect the Confidential Information using the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care.
+          </p>
 
-          <div className={`${styles.docLine} ${styles.dlSectionHead}`} />
-          <div className={`${styles.docLine} ${styles.dlW65}`} />
-          <div className={`${styles.docLine} ${styles.dlW45}`} />
+          <p className={styles.docTextSectionHead}>3. Term</p>
+          <p className={styles.docTextParagraph}>
+            The obligations of confidentiality set forth in this Agreement shall commence on the date first written above and shall continue for a period of{' '}
+            {form.duration
+              ? <span className={styles.docFilled}>{form.duration.toLowerCase()}</span>
+              : <span className={styles.docPlaceholder}>[Duration]</span>
+            }{' '}
+            thereafter, unless earlier terminated by written agreement of the Parties.
+          </p>
+
+          <p className={styles.docTextSectionHead}>4. Governing Law</p>
+          <p className={styles.docTextParagraph}>
+            This Agreement shall be governed by and construed in accordance with the laws of the State of{' '}
+            {form.governingState
+              ? <span className={styles.docFilled}>{form.governingState}</span>
+              : <span className={styles.docPlaceholder}>[State]</span>
+            }, without regard to its conflict of law provisions.
+          </p>
+
+          <hr className={styles.docTextDivider} />
+          <p className={styles.docTextSectionHead}>Signatures</p>
+          <div className={styles.docTextSigBlock}>
+            <div className={styles.docTextSigCol}>
+              <div className={styles.docTextSigLine}>
+                <Val value={disc} placeholder="[Disclosing Party]" />
+              </div>
+              <div className={styles.docTextSigLine}>Signature</div>
+              <div className={styles.docTextSigLine}>Date</div>
+            </div>
+            <div className={styles.docTextSigCol}>
+              <div className={styles.docTextSigLine}>
+                <Val value={recv} placeholder="[Receiving Party]" />
+              </div>
+              <div className={styles.docTextSigLine}>Signature</div>
+              <div className={styles.docTextSigLine}>Date</div>
+            </div>
+          </div>
+
+          {/* No watermark — document is complete */}
         </div>
       </div>
       <p className={styles.docPageLabel}>Preview: page 1 of 4</p>
@@ -161,9 +216,12 @@ function DocPreview({ disc, recv, onDownload }) {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
+const EMPTY_FORM = { disclosingParty: '', receivingParty: '', startDate: '', duration: '', governingState: '', email: '', infoTypes: [], description: '', relationship: '', allowedUse: '', sharing: '' }
+
 export default function Confirmation() {
   const location = useLocation()
-  const { email = '', disclosingParty = '', receivingParty = '' } = location.state || {}
+  const form = location.state?.form || EMPTY_FORM
+  const { disclosingParty = '', receivingParty = '', email = '' } = form
   const pricingRef = useRef(null)
 
   useEffect(() => {
@@ -260,7 +318,7 @@ export default function Confirmation() {
 
           {/* RIGHT COLUMN */}
           <div className={styles.rightCol}>
-            <DocPreview disc={disclosingParty} recv={receivingParty} onDownload={handleDownload} />
+            <DocPreview form={form} onDownload={handleDownload} />
           </div>
 
         </div>

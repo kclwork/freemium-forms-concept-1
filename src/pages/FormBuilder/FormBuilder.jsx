@@ -500,7 +500,7 @@ export default function FormBuilder() {
 
   function handleSubmit() {
     triggerPDFDownload(form.disclosingParty, form.receivingParty)
-    navigate('/forms/nda/confirmation', { state: { email: form.email, disclosingParty: form.disclosingParty, receivingParty: form.receivingParty } })
+    navigate('/forms/nda/confirmation', { state: { form } })
   }
 
   return (
