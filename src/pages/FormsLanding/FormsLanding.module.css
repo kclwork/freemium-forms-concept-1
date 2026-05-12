@@ -1,0 +1,550 @@
+/* ─────────────────────────────────────────
+   PAGE
+───────────────────────────────────────── */
+.page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero {
+  background: #f4f4f4;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 72px 48px 80px;
+}
+
+.heroInner {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroHeadline {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+  color: #111;
+}
+
+.heroSubheadline {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  max-width: 520px;
+}
+
+/* ─────────────────────────────────────────
+   SEARCH
+───────────────────────────────────────── */
+.searchWrap {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  margin-top: 8px;
+}
+
+.searchInputWrap {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 0 16px;
+  gap: 10px;
+  transition: border-color 0.15s;
+}
+
+.searchInputWrap:focus-within {
+  border-color: #555;
+}
+
+.searchIcon {
+  width: 16px;
+  height: 16px;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  color: #111;
+  padding: 14px 0;
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+/* Dropdown */
+.searchDropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  padding: 4px 0;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.searchResult {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  background: none;
+  border: none;
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+  gap: 12px;
+  text-align: left;
+}
+
+.searchResult:hover {
+  background: #f5f5f5;
+}
+
+.searchResultDisabled {
+  cursor: default;
+  color: #aaa;
+}
+
+.searchResultDisabled:hover {
+  background: #fafafa;
+}
+
+.searchResultTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+.searchResultDisabled .searchResultTitle {
+  color: #888;
+}
+
+.searchResultCategory {
+  font-size: 12px;
+  color: #aaa;
+  white-space: nowrap;
+}
+
+.searchNoResults {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #999;
+  background: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+}
+
+/* ─────────────────────────────────────────
+   BROWSE SECTION
+───────────────────────────────────────── */
+.browseSection {
+  padding: 72px 0 80px;
+}
+
+.browseInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.browseHeading {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.browseSub {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 32px;
+}
+
+/* ─────────────────────────────────────────
+   TABS
+───────────────────────────────────────── */
+.tabRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid #ddd;
+  background: #fff;
+  color: #555;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.tab:hover {
+  border-color: #bbb;
+  color: #111;
+}
+
+.tabActive {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.tabActive:hover {
+  background: #333;
+  border-color: #333;
+}
+
+/* ─────────────────────────────────────────
+   CARD GRID
+───────────────────────────────────────── */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardImg {
+  background: #e8e8e8;
+  border-radius: 6px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.imgLabel {
+  font-size: 11px;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.cardCategory {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  flex: 1;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+}
+
+.cardLinkDisabled {
+  color: #999;
+  cursor: default;
+}
+
+.cardLinkDisabled:hover {
+  text-decoration: none;
+}
+
+/* ─────────────────────────────────────────
+   VIEW MORE
+───────────────────────────────────────── */
+.viewMoreRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.viewMoreBtn {
+  padding: 12px 32px;
+  background: #fff;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+}
+
+.viewMoreBtn:hover {
+  background: #f5f5f5;
+  border-color: #aaa;
+}
+
+/* ─────────────────────────────────────────
+   FAQ
+───────────────────────────────────────── */
+.faqSection {
+  background: #f8f8f8;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 80px 48px;
+}
+
+.faqInner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.faqHeading {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.helpCenterBtn {
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 10px 22px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  background: #fff;
+  cursor: pointer;
+}
+
+.helpCenterBtn:hover {
+  background: #f0f0f0;
+}
+
+.accordionList {
+  text-align: left;
+  border-top: 1px solid #e0e0e0;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordionTrigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.accordionTrigger:hover {
+  color: #333;
+}
+
+.accordionIcon {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: #888;
+  line-height: 1;
+  font-weight: 400;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.accordionIcon.open {
+  transform: rotate(45deg);
+}
+
+.accordionBody {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  padding-bottom: 20px;
+  max-width: 560px;
+}
+
+/* ─────────────────────────────────────────
+   PLANS
+───────────────────────────────────────── */
+.plansSection {
+  padding: 80px 48px;
+}
+
+.plansInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plansSectionHeading {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: #111;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.plansSectionHeading em {
+  font-style: italic;
+}
+
+.plansSubtext {
+  text-align: center;
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.planCard {
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.planName {
+  font-size: 17px;
+  font-weight: 800;
+  color: #111;
+}
+
+.planDesc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #666;
+  flex: 1;
+}
+
+.planPrice {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #111;
+  line-height: 1;
+}
+
+.planPricePer {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0;
+}
+
+.planPriceContact {
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+  padding: 8px 0 4px;
+}
+
+.btnPlanFilled {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btnPlanFilled:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.btnPlanOutlined {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btnPlanOutlined:hover {
+  background: #f5f5f5;
+}

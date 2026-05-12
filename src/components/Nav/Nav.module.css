@@ -1,0 +1,78 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 48px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.navBrand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  color: #111;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.shieldIcon {
+  width: 24px;
+  height: 28px;
+  background: #111;
+  clip-path: polygon(50% 0%, 100% 18%, 100% 58%, 50% 100%, 0% 58%, 0% 18%);
+  flex-shrink: 0;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+}
+
+.navLinks li a:hover {
+  color: #111;
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.helpLine {
+  font-size: 13px;
+  color: #555;
+}
+
+.signIn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1.5px solid #ddd;
+  border-radius: 4px;
+}
+
+.signIn:hover {
+  background: #f4f4f4;
+}

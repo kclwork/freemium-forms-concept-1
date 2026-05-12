@@ -1,0 +1,564 @@
+/* ─────────────────────────────────────────
+   PAGE
+───────────────────────────────────────── */
+.page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────
+   PAGE HEADER
+───────────────────────────────────────── */
+.pageHeader {
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+  padding: 36px 0 0;
+}
+
+.pageHeaderInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.headline {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+/* ─────────────────────────────────────────
+   STEPPER
+───────────────────────────────────────── */
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 36px;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #111;
+  margin-top: 15px;
+}
+
+.stepLineFilled {
+  background: #111;
+}
+
+.stepCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #111;
+  border: 2px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.stepCircleDark {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.stepLabel {
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.stepLabelDone {
+  color: #666;
+}
+
+/* ─────────────────────────────────────────
+   TWO-COLUMN LAYOUT
+───────────────────────────────────────── */
+.twoColWrap {
+  padding-bottom: 0;
+}
+
+.twoColInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 48px 80px;
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* ─────────────────────────────────────────
+   LEFT COLUMN
+───────────────────────────────────────── */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ─────────────────────────────────────────
+   SUCCESS BANNER
+───────────────────────────────────────── */
+.successBanner {
+  background: #ecfdf5;
+  border: 1.5px solid #a7f3d0;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.successIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.successText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.successHeading {
+  font-size: 16px;
+  font-weight: 800;
+  color: #14532d;
+  letter-spacing: -0.2px;
+}
+
+.successSub {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #166534;
+}
+
+.successSub strong {
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────
+   DELIVERY CARD
+───────────────────────────────────────── */
+.deliveryCard {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.deliveryLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #888;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+
+.deliveryRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+}
+
+.rowIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.deliveryRowBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.deliveryRowTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+}
+
+.deliveryRowSub {
+  font-size: 12px;
+  color: #888;
+}
+
+.deliveryAction {
+  background: none;
+  border: none;
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #692BEE;
+  cursor: pointer;
+  padding: 2px 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.deliveryAction:hover {
+  text-decoration: underline;
+}
+
+.deliveryDivider {
+  height: 1px;
+  background: #f0f0f0;
+  margin: 0 20px;
+}
+
+/* ─────────────────────────────────────────
+   UPGRADE CARD
+───────────────────────────────────────── */
+.upgradeCard {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.upgradeHeading {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: #111;
+  line-height: 1.25;
+}
+
+.upgradeBody {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.upgradeBullets {
+  list-style: none;
+  padding: 0;
+  margin: 2px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upgradeBulletItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
+.bulletShield {
+  width: 12px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.btnPrimary {
+  width: 100%;
+  padding: 13px;
+  background: #692BEE;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 4px;
+}
+
+.btnPrimary:hover {
+  background: #5722c8;
+}
+
+.btnSecondary {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  color: #333;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnSecondary:hover {
+  background: #f5f5f5;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT COLUMN — DOC PREVIEW
+───────────────────────────────────────── */
+.rightCol {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+}
+
+.docPreviewWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.docPanel {
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.docPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+
+.docPanelTitle {
+  font-size: 12px;
+  color: #555;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 75%;
+}
+
+.docDownloadBtn {
+  background: none;
+  border: none;
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #692BEE;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.docDownloadBtn:hover {
+  text-decoration: underline;
+}
+
+.docBody {
+  padding: 24px 20px 28px;
+  position: relative;
+  min-height: 420px;
+}
+
+/* Document lines — all filled (completed state) */
+.docLine {
+  height: 9px;
+  background: #b8b8b8;
+  border-radius: 3px;
+  margin-bottom: 9px;
+}
+
+.dlTitle    { width: 65%; height: 13px; margin-bottom: 10px; background: #999; }
+.dlSubtitle { width: 42%; margin-bottom: 18px; background: #aaa; }
+.dlSectionHead { width: 30%; height: 8px; background: #aaa; margin-bottom: 10px; }
+.dlW95 { width: 95%; }
+.dlW93 { width: 93%; }
+.dlW90 { width: 90%; }
+.dlW88 { width: 88%; }
+.dlW85 { width: 85%; }
+.dlW82 { width: 82%; }
+.dlW78 { width: 78%; }
+.dlW72 { width: 72%; }
+.dlW70 { width: 70%; }
+.dlW68 { width: 68%; }
+.dlW65 { width: 65%; }
+.dlW60 { width: 60%; }
+.dlW55 { width: 55%; }
+.dlW45 { width: 45%; }
+
+.docDivider {
+  height: 1px;
+  background: #ddd;
+  margin-bottom: 16px;
+}
+
+.docSpacer {
+  height: 14px;
+}
+
+.docPageLabel {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────
+   PLANS SECTION
+───────────────────────────────────────── */
+.plansSection {
+  border-top: 1px solid #ebebeb;
+  padding: 80px 48px;
+  background: #fafafa;
+}
+
+.plansInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plansSectionHeading {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: #111;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.plansSectionHeading em {
+  font-style: italic;
+}
+
+.plansSubtext {
+  text-align: center;
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.planCard {
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+}
+
+.planName {
+  font-size: 17px;
+  font-weight: 800;
+  color: #111;
+}
+
+.planDesc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #666;
+  flex: 1;
+}
+
+.planPrice {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: #111;
+  line-height: 1;
+}
+
+.planPricePer {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0;
+}
+
+.planPriceContact {
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+  padding: 8px 0 4px;
+}
+
+.btnPlanFilled {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btnPlanFilled:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.btnPlanOutlined {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btnPlanOutlined:hover {
+  background: #f5f5f5;
+}

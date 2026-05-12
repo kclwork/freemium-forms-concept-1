@@ -1,0 +1,678 @@
+/* ─────────────────────────────────────────
+   PAGE
+───────────────────────────────────────── */
+.page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────
+   PAGE HEADER
+───────────────────────────────────────── */
+.pageHeader {
+  border-bottom: 1px solid #e8e8e8;
+  background: #fff;
+  padding: 36px 0 0;
+}
+
+.pageHeaderInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.headline {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+/* ─────────────────────────────────────────
+   STEPPER
+───────────────────────────────────────── */
+.stepper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-bottom: 36px;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #ddd;
+  margin-top: 15px;
+  transition: background 0.25s;
+}
+
+.stepLineFilled {
+  background: #111;
+}
+
+.stepCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #bbb;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.stepCircleDark {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.stepLabel {
+  font-size: 11px;
+  color: #bbb;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.stepLabelActive {
+  color: #111;
+  font-weight: 600;
+}
+
+.stepLabelDone {
+  color: #666;
+}
+
+/* ─────────────────────────────────────────
+   TWO-COLUMN LAYOUT
+───────────────────────────────────────── */
+.twoColWrap {
+  padding-bottom: 80px;
+}
+
+.twoColInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 48px 0;
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* ─────────────────────────────────────────
+   LEFT COLUMN
+───────────────────────────────────────── */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.stepHeading {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: #111;
+}
+
+.stepSub {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-top: -16px;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #888;
+  margin-bottom: -8px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ─────────────────────────────────────────
+   FORM FIELDS
+───────────────────────────────────────── */
+.fieldWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+}
+
+.fieldHelper {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.5;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d8d8d8;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input::placeholder {
+  color: #bbb;
+}
+
+.input:focus {
+  border-color: #555;
+}
+
+.inputFilled {
+  border-color: #bbb;
+}
+
+.select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 96px;
+  line-height: 1.55;
+}
+
+/* Checkboxes */
+.checkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.checkInput {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  accent-color: #111;
+  cursor: pointer;
+}
+
+/* Radio buttons */
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radioRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  line-height: 1.45;
+}
+
+.radioInput {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #111;
+  cursor: pointer;
+}
+
+/* ─────────────────────────────────────────
+   STEP CTAs
+───────────────────────────────────────── */
+.stepCtas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4px;
+}
+
+.btnBack {
+  padding: 10px 20px;
+  background: #fff;
+  color: #555;
+  border: 1.5px solid #ddd;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btnBack:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.btnNext {
+  padding: 10px 22px;
+  background: #692BEE;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnNext:hover {
+  background: #5722c8;
+}
+
+/* ─────────────────────────────────────────
+   STEP 4 — REVIEW CARD
+───────────────────────────────────────── */
+.reviewCard {
+  border: 1.5px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.reviewCardLabel {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #888;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+
+.reviewTable {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewRow {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.reviewRow:last-child {
+  border-bottom: none;
+}
+
+.reviewFieldLabel {
+  font-size: 13px;
+  color: #888;
+}
+
+.reviewValue {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+}
+
+.reviewEmpty {
+  color: #ccc;
+  font-weight: 400;
+}
+
+.editBtn {
+  background: none;
+  border: none;
+  font-family: system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #692BEE;
+  cursor: pointer;
+  padding: 2px 0;
+  white-space: nowrap;
+}
+
+.editBtn:hover {
+  text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────
+   STEP 4 — EMAIL GATE
+───────────────────────────────────────── */
+.emailCard {
+  background: #f8f8f8;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 6px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emailCardHeading {
+  font-size: 17px;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.2px;
+}
+
+.emailCardSub {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #666;
+  margin-top: -2px;
+}
+
+.emailInputRow {
+  display: flex;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+.emailInputRow:focus-within {
+  border-color: #555;
+}
+
+.emailInputRowError {
+  border-color: #d32f2f !important;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 11px 14px;
+  border: none;
+  outline: none;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  color: #111;
+  background: transparent;
+}
+
+.emailInput::placeholder {
+  color: #aaa;
+}
+
+.emailSubmitBtn {
+  padding: 0 16px;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.emailSubmitBtn:hover {
+  background: #333;
+}
+
+.emailError {
+  font-size: 12px;
+  color: #d32f2f;
+  margin-top: -2px;
+}
+
+.emailDisclaimer {
+  font-size: 11px;
+  line-height: 1.55;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT COLUMN — DOC PREVIEW
+───────────────────────────────────────── */
+.rightCol {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+}
+
+.docPreviewWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.docPanel {
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.docPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fafafa;
+}
+
+.docPanelTitle {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+}
+
+.previewBadge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #aaa;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.docBody {
+  padding: 24px 20px 28px;
+  position: relative;
+  min-height: 380px;
+}
+
+/* Document lines */
+.docLine {
+  height: 9px;
+  background: #eaeaea;
+  border-radius: 3px;
+  margin-bottom: 9px;
+  transition: background 0.35s ease;
+}
+
+.docLineFilled {
+  background: #c4c4c4;
+}
+
+.dlTitle    { width: 65%; height: 13px; margin-bottom: 10px; }
+.dlSubtitle { width: 42%; margin-bottom: 18px; }
+.dlSectionHead { width: 30%; height: 8px; background: #d8d8d8; margin-bottom: 10px; }
+.dlW95 { width: 95%; }
+.dlW93 { width: 93%; }
+.dlW90 { width: 90%; }
+.dlW88 { width: 88%; }
+.dlW85 { width: 85%; }
+.dlW82 { width: 82%; }
+.dlW78 { width: 78%; }
+.dlW70 { width: 70%; }
+.dlW65 { width: 65%; }
+.dlW60 { width: 60%; }
+.dlW55 { width: 55%; }
+.dlW45 { width: 45%; }
+
+.docDivider {
+  height: 1px;
+  background: #e8e8e8;
+  margin-bottom: 16px;
+}
+
+.docSpacer {
+  height: 14px;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-35deg);
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: rgba(0,0,0,0.06);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.docPageLabel {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────
+   DOC TEXT PREVIEW
+───────────────────────────────────────── */
+.docText {
+  font-family: 'Georgia', serif;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px 22px 24px;
+  position: relative;
+  min-height: 380px;
+}
+
+.docTextTitle {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.docTextParagraph {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.docTextSectionHead {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #222;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.docTextDivider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.docTextSigBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.docTextSigCol {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.docTextSigLine {
+  border-top: 1px solid #bbb;
+  padding-top: 3px;
+  color: #666;
+  font-size: 9px;
+}
+
+.docPlaceholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+.docFilled {
+  color: #222;
+  font-style: normal;
+  font-weight: 600;
+}

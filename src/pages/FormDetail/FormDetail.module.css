@@ -1,0 +1,448 @@
+/* ─────────────────────────────────────────
+   PAGE
+───────────────────────────────────────── */
+.page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+/* ─────────────────────────────────────────
+   BREADCRUMB
+───────────────────────────────────────── */
+.breadcrumbBar {
+  border-bottom: 1px solid #ebebeb;
+  background: #fff;
+}
+
+.breadcrumbInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 48px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────
+   PAGE HEADER
+───────────────────────────────────────── */
+.pageHeader {
+  border-bottom: 1px solid #ebebeb;
+  padding: 40px 0 44px;
+}
+
+.pageHeaderInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #999;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.headline {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #555;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  background: #fff;
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────
+   TWO COLUMN LAYOUT
+───────────────────────────────────────── */
+.twoColWrap {
+  padding: 0 0 72px;
+}
+
+.twoColInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 48px 0;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 56px;
+  align-items: start;
+}
+
+/* ─────────────────────────────────────────
+   LEFT COLUMN
+───────────────────────────────────────── */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionHeading {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: #111;
+}
+
+.sectionBody {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Checklist */
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.checkIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* FAQ Accordion */
+.accordionList {
+  border-top: 1px solid #e0e0e0;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordionTrigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.accordionTrigger:hover {
+  color: #333;
+}
+
+.accordionIcon {
+  flex-shrink: 0;
+  font-size: 18px;
+  color: #888;
+  line-height: 1;
+  font-weight: 400;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.accordionIcon.open {
+  transform: rotate(45deg);
+}
+
+.accordionBody {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  padding-bottom: 18px;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT COLUMN
+───────────────────────────────────────── */
+.rightCol {
+  position: sticky;
+  top: 80px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CTA Card */
+.ctaCard {
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #fff;
+}
+
+.ctaHeading {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: #111;
+  line-height: 1.2;
+}
+
+.ctaSub {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #777;
+  margin-top: -4px;
+}
+
+.trustList {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #444;
+  font-weight: 500;
+}
+
+.shieldIcon {
+  width: 14px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.btnStart {
+  width: 100%;
+  padding: 14px;
+  background: #692BEE;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.15s;
+}
+
+.btnStart:hover {
+  background: #5722c8;
+}
+
+/* ─────────────────────────────────────────
+   DOCUMENT PREVIEW
+───────────────────────────────────────── */
+.docPreviewWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.docPanel {
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.docInner {
+  padding: 28px 24px 32px;
+  position: relative;
+  min-height: 320px;
+}
+
+/* Document lines */
+.docLine {
+  height: 9px;
+  background: #e4e4e4;
+  border-radius: 3px;
+  margin-bottom: 9px;
+}
+
+.docLineTitle   { width: 70%; height: 13px; background: #d0d0d0; margin-bottom: 10px; }
+.docLineSubtitle { width: 48%; height: 9px; margin-bottom: 20px; }
+.docDivider     { height: 1px; background: #e0e0e0; margin-bottom: 18px; }
+.docLineSectionHead { width: 35%; height: 9px; background: #cacaca; margin-bottom: 10px; }
+.docLineW95     { width: 95%; }
+.docLineW93     { width: 93%; }
+.docLineW90     { width: 90%; }
+.docLineW88     { width: 88%; }
+.docLineW85     { width: 85%; }
+.docLineW82     { width: 82%; }
+.docLineW78     { width: 78%; }
+.docLineW72     { width: 72%; }
+.docLineW68     { width: 68%; }
+.docLineW62     { width: 62%; }
+.docLineW55     { width: 55%; }
+.docLineW96     { width: 96%; }
+.docSpacer      { height: 14px; }
+
+/* PREVIEW watermark */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-35deg);
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: rgba(0, 0, 0, 0.07);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.docPageLabel {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────
+   RELATED FORMS
+───────────────────────────────────────── */
+.relatedSection {
+  border-top: 1px solid #ebebeb;
+  padding: 64px 0 72px;
+  background: #fafafa;
+}
+
+.relatedInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.relatedHeading {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: #111;
+  margin-bottom: 28px;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.relatedCardImg {
+  background: #e4e4e4;
+  border-radius: 6px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.imgLabel {
+  font-size: 11px;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.relatedCategory {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+.relatedTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.35;
+}
+
+.relatedLink {
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #aaa;
+  cursor: default;
+  margin-top: 2px;
+}

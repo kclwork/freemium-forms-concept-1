@@ -1,0 +1,165 @@
+.footer {
+  background: #111;
+  color: #fff;
+}
+
+.footerTop {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 48px 0;
+}
+
+.footerNewsletter {
+  margin-bottom: 48px;
+}
+
+.footerNewsletterLabel {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.footerNewsletterRow {
+  display: flex;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.footerEmailInput {
+  flex: 1;
+  padding: 11px 14px;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+}
+
+.footerEmailInput::placeholder {
+  color: #777;
+}
+
+.footerEmailInput:focus {
+  outline: none;
+  border-color: #888;
+}
+
+.footerEmailBtn {
+  padding: 11px 18px;
+  background: #fff;
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.footerLinkGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+  padding-bottom: 56px;
+}
+
+.footerLinkCol h4 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #aaa;
+  margin-bottom: 14px;
+}
+
+.footerLinkCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footerLinkCol ul li a {
+  font-size: 13px;
+  color: #888;
+  text-decoration: none;
+}
+
+.footerLinkCol ul li a:hover {
+  color: #ccc;
+}
+
+.footerBottom {
+  border-top: 1px solid #2a2a2a;
+}
+
+.footerBottomInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footerBottomBrand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footerShield {
+  width: 16px;
+  height: 20px;
+  background: #fff;
+  clip-path: polygon(50% 0%, 100% 18%, 100% 58%, 50% 100%, 0% 58%, 0% 18%);
+}
+
+.footerBrandName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footerCopyright {
+  font-size: 11px;
+  color: #666;
+  margin-left: 8px;
+}
+
+.footerLegalLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footerLegalLinks a {
+  font-size: 11px;
+  color: #666;
+  text-decoration: none;
+}
+
+.footerLegalLinks a:hover {
+  color: #aaa;
+}
+
+.footerBadges {
+  display: flex;
+  gap: 8px;
+}
+
+.appBadge {
+  background: #222;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: #888;
+  white-space: nowrap;
+}
